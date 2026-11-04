@@ -267,16 +267,16 @@ body::selection {
     border-color: hsl(0, 0%, 50%);
     box-shadow: 0 0 50px hsla(0, 0%, 100%, 0.3);
 }
-.skills-card .skil-types, .skil-category h4 {
+.skills-card .skil-types,.developed-with ,.skil-category h4 {
 
     display: flex;
     color: gray;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
 
 }
 
-.skills-card .skil-types p {
+.skills-card .skil-types p, .developed-with p {
     border: 1px solid hsla(0, 0%, 80%, 0.2);
     font-size: small;
     text-transform: uppercase;
@@ -288,8 +288,9 @@ body::selection {
 
 .projects {
     padding-block: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    display: grid;border-bottom: 1px solid hsl(0, 0%, 20%);
+
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: 30px;
 }
 .projects h1 {
@@ -298,20 +299,66 @@ body::selection {
 
 
 .project-card {
-    gap: 20px;
     overflow: hidden;
-    border: 1px solid hsl(0, 0%, 30%);
+    border: 1px solid hsl(0, 0%, 15%);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
 
 }
-
+.img-container {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.img-container:hover  {
+        transform: scale(1.03);
+}
+ .img-container:hover .visit-website {
+    display: flex;
+ }
 .visit-website {
+
+    font-size: 20px;
     text-align: right;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 0% , 0.5);
+    display: none;
+
 }
 
+.visit-website a {
 
+    text-decoration: none;
+    color: hsl(0, 0%, 80%);
+
+}
+
+.visit-website a:hover {
+    color: hsl(0, 0%, 100%);
+}
 .img-container img {
     width: 100%;
+    
+}
+.discription {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.discription h2 {
+    color: hsl(0, 0%, 100%);
+}
+
+.contact {
+    display: flex;
+}
+
+.contact form {
+    flex: 1;
+    
 }
