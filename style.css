@@ -102,7 +102,7 @@ header section h2 {
 }
 .hero {
     display: flex;
-    height: 90vh;
+    /* height: 90vh; */
     padding-top: 100px;
     padding-bottom: 70px;
     padding-inline: 5%;
