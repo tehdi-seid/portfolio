@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Tehdi seid</title>
   </head>
@@ -14,19 +18,21 @@
       </section>
       <nav>
         <ul>
-          <li><a href="">Home</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="">Projects</a></li>
           <li><a href="#skill">Skills</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <section>
-        <section class="contact-button"><a>get in touch</a></section>
+        <section class="contact-button">
+          <a href="#contact">get in touch</a>
+        </section>
       </section>
     </header>
     <main class="main">
-      <section class="hero">
+      <section class="hero" id="home">
         <section class="hero-text">
           <p class="am-open">
             <span></span>open to turn ideas into meaningful experiences
@@ -117,7 +123,7 @@
           </div>
         </div>
       </section>
-      <section class="projects">
+      <section class="projects" id="projects">
         <h1>key projects</h1>
         <div class="project-card card-1">
           <div class="img-container">
@@ -218,31 +224,66 @@
           </div>
         </div>
       </section>
-      <section class="contact">
-        <div>
-          <div>
-            <h1>get in touch</h1>
+      <section class="contact" id="contact">
+        <div class="contact-me">
+          <div class="contact-detail">
+            <h1>
+              get in <br />
+              touch
+            </h1>
             <p>
-              I'm open to learning opportunities, collaboration, and connecting
-              with other developers who are passionate about technology.
+              I'm open to learning opportunities, collaboration, and <br />
+              connecting with other developers who are passionate about
+              technology.
             </p>
             <h2>Let's build something meaningful together!</h2>
           </div>
           <div class="social">
             <div class="email">
-              <a href="">email</a>
+              <a href="mailto:tehdiseid@gmail.com" target="_blank"
+                >Email <i class="fa-regular fa-envelope"></i
+              ></a>
             </div>
             <div class="github">
-              <a href="">github</a>
+              <a href=""
+                ><a href="https://github.com/tehdi-seid" target="_blank"
+                  >github <i class="fa-brands fa-github"></i></a
+              ></a>
             </div>
             <div class="telegram">
-              <a href="">telegram</a>
+              <a href=""
+                ><a href="https://t.me/yefate" target="_blank"
+                  >telegram <i class="fa-brands fa-telegram"></i></a
+              ></a>
             </div>
           </div>
         </div>
 
-        <form>dsjkalhn</form>
+        <form>
+          <div>
+            <input type="text" name="name" placeholder="Name" />
+          </div>
+          <div>
+            <input type="text" name="email" placeholder="Email" />
+          </div>
+          <div>
+            <input type="password" name="password" placeholder="Password" />
+          </div>
+          <div>
+            <input type="submit" name="submit" value="Send" />
+          </div>
+        </form>
       </section>
     </main>
+
+    <footer>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skill">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </footer>
   </body>
 </html>

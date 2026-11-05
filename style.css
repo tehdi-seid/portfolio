@@ -49,7 +49,7 @@ body::selection {
     gap: 1rem;
 }
 
-.header nav ul li {
+.header nav ul li, footer ul li {
     list-style: none;
     position: relative;
 }
@@ -73,17 +73,18 @@ body::selection {
     transform-origin: right;
     transform-origin: right;
 }
-.header nav ul li a {
-    transition: transform 0.3s ease-in-out;
+.header nav ul li a, footer ul li a {
+    transition: color 0.3s ease-in-out;
     text-decoration: none;
     color: hsl(0, 0%, 50%);
 }
 
 
-.header nav ul li a:hover {
+.header nav ul li a:hover, footer ul li a:hover {
     color: hsl(0, 0%, 80%);
 }
 .contact-button a {
+    text-decoration: none;
     padding: .3rem 1rem;
     color: hsl(0, 0%, 80%);
     border: 1px solid hsl(0, 0%, 80%);
@@ -210,7 +211,7 @@ body::selection {
 .about-me {
     display: flex;
     color: hsl(0, 0%, 40%);
-    padding-block: 40px;
+    padding-block: 60px;
     justify-content: space-between;
     padding-inline: 5%;
     border-bottom: 1px solid hsl(0, 0%, 20%);
@@ -234,7 +235,7 @@ body::selection {
 .skills {
     display: grid;
     border-bottom: 1px solid hsl(0, 0%, 20%);
-    padding-block: 20px;
+    padding-block: 60px;
     grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
     gap: 30px;
     padding-inline: 5%;
@@ -287,7 +288,7 @@ body::selection {
 }
 
 .projects {
-    padding-block: 20px;
+    padding-block: 60px;
     display: grid;border-bottom: 1px solid hsl(0, 0%, 20%);
 
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
@@ -356,9 +357,136 @@ body::selection {
 
 .contact {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline: 5%;
+    padding-block: 60px;
+    border-bottom: 1px solid hsl(0, 0%, 20%);
+    gap: 50px;
+}
+
+.contact .contact-me, .contact form {
+    flex: 1;
 }
 
 .contact form {
-    flex: 1;
-    
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.contact form div input {
+    width: 100%;
+    position: relative;
+    padding-block: .5rem;
+    border: none;
+    border-bottom: 1px solid hsl(0, 0%, 20%);
+    background: transparent;
+    color: hsl(0, 0%, 60%);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact form div p {
+    position: absolute;
+}
+
+.contact form div input:focus {
+    border-bottom-color: white;
+}
+
+.contact form div input[type="submit"]{
+    width: max-content;
+    border: 1px solid hsl(0, 0%, 30%);
+    background-color: hsl(0, 0%, 80%);
+    cursor: pointer;
+    color: hsl(0, 0%, 10%);
+    padding-inline: 2rem;
+}
+
+.contact form div input:focus ~ p {
+    top: -100%;
+}
+.contact form div p {
+    color: white;
+}
+
+.contact-me{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contact-me .contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-detail h1 {
+    font-size: 120px;
+    text-transform: capitalize;
+    line-height: 1;
+}
+
+.social {
+
+    display: flex;
+    gap: 30px;
+}
+
+.social a {
+    text-decoration: none;
+    color: hsl(0, 0%, 50%);
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+
+}
+.social a:hover {
+    color: hsl(0, 0%, 80%);
+}
+
+footer {
+    padding-block: 30px;
+    padding-inline: 5%;
+    background-color: hsl(0, 0%, 10%);
+}
+
+footer ul {
+    display: flex;
+    gap: 40px;
+    justify-content: right;
+}
+
+
+@media (max-width: 700px) {
+
+    .hero {
+        height: 60vh;
+    }
+    .name {
+        font-size: 5rem;
+    }
+
+    .about-me {
+        flex-direction: column;
+    }
+
+    .contact{
+        flex-direction: column;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    .contact .contact-me {
+        width: 100%;
+    } 
+}
+
+@media (max-width: 576px){
+    .header nav ul {
+        display: none;
+    }
 }
