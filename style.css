@@ -107,7 +107,7 @@ header section h2 {
     padding-bottom: 70px;
     padding-inline: 5%;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 
     width: 100%;
     background: radial-gradient(circle, transparent, hsl(0, 0%, 5%));
