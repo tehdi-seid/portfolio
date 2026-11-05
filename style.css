@@ -296,6 +296,7 @@ body::selection {
 }
 .projects h1 {
     grid-column: 1/-1;
+    color: hsl(0, 0%, 80%);
 }
 
 
@@ -304,6 +305,7 @@ body::selection {
     border: 1px solid hsl(0, 0%, 15%);
     border-radius: 10px;
     display: flex;
+    box-shadow: 0 3px 20px hsl(0, 0%, 20%);
     flex-direction: column;
 
 }
