@@ -116,7 +116,8 @@ body::selection {
 
 .hero-background {
     position: absolute;
-    width: 100%;
+    /* width: 100%; */
+    inset: 0;
     height: 80vh;
     z-index: -1;
     background-image:
@@ -375,16 +376,23 @@ body::selection {
     gap: 60px;
 }
 
-.contact form div input {
+.contact form div input, textarea {
     width: 100%;
     position: relative;
     padding-block: .5rem;
+    font-size: 1.2rem;
     border: none;
     border-bottom: 1px solid hsl(0, 0%, 20%);
     background: transparent;
     color: hsl(0, 0%, 60%);
     outline: none;
     transition: all 0.3s ease-in-out;
+}
+
+textarea {
+    max-height: 400px;
+    resize: none;
+    scroll-behavior: smooth;
 }
 
 .contact form div p {
@@ -395,13 +403,16 @@ body::selection {
     border-bottom-color: white;
 }
 
-.contact form div input[type="submit"]{
+.contact form div button{
     width: max-content;
     border: 1px solid hsl(0, 0%, 30%);
     background-color: hsl(0, 0%, 80%);
+    font-size: 1.2rem;
     cursor: pointer;
     color: hsl(0, 0%, 10%);
     padding-inline: 2rem;
+    padding-block: .5rem;
+
 }
 
 .contact form div input:focus ~ p {
@@ -448,6 +459,7 @@ body::selection {
 
 footer {
     padding-block: 30px;
+    width: 100%;
     padding-inline: 5%;
     background-color: hsl(0, 0%, 10%);
 }
@@ -462,10 +474,11 @@ footer ul {
 @media (max-width: 700px) {
 
     .hero {
-        height: 60vh;
+        height: max-content;
+        padding-bottom: 2rem;
     }
     .name {
-        font-size: 5rem;
+        font-size: 6rem;
     }
 
     .about-me {
@@ -483,6 +496,9 @@ footer ul {
     .contact .contact-me {
         width: 100%;
     } 
+    footer {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 576px){
