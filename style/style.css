@@ -11,6 +11,9 @@
 
 
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     color: hsl(0, 0%, 70%);
     height: 100vh;
